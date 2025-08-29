@@ -45,6 +45,14 @@ public class ContactoPersonal extends Contacto{
 		return "ContactoPersonal [fechaCumple=" + fechaCumple + ", toString()=" + super.toString() + "]";
 	}
 
+	@Override
+	public void mostrarInformacion() {
+		// TODO Auto-generated method stub
+		System.out.println("Soy un contacto personal");
+		System.out.println("Nombre: "+ this.getNombre());
+		System.out.println("Cumpleaños: "+this.getFechaCumple());
+	}
+
 	
 	
 	

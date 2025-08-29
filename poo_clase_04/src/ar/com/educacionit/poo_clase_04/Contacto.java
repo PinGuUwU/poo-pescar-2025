@@ -1,6 +1,8 @@
 package ar.com.educacionit.poo_clase_04;
+
 //Superclase
-public class Contacto {
+//El abstract sirve para saber que esta clase no se instancia
+public abstract class Contacto {
 
 	//Atributos
 	private String nombre;
@@ -51,7 +53,9 @@ public class Contacto {
 	}
 	
 	
-	
+	public void mostrarInformacion() {
+		System.out.println("Soy un contacto");
+	}
 	
 	
 	

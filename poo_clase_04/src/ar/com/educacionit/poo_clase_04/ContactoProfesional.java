@@ -32,7 +32,14 @@ public class ContactoProfesional extends Contacto{
 		return "ContactoProfesional [empresa=" + empresa + ", toString()=" + super.toString() + "]";
 	}
 	
-	
+	@Override
+	public void mostrarInformacion() {
+		// TODO Auto-generated method stub
+		System.out.println("Soy un contacto profesional");
+		System.out.println("Nombre: "+ this.getNombre());
+		System.out.println("Empresa: "+ this.getEmpresa());
+	}
+
 	
 	
 

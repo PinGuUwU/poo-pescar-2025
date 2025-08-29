@@ -9,6 +9,9 @@ public class Contacto {
 	
 	
 	//Constructor por defecto
+	public Contacto() {
+		
+	}
 		
 	//Constructor parametrizado
 	public Contacto(String nombre, String correo, Direccion direccion) {
@@ -40,6 +43,11 @@ public class Contacto {
 
 	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
+	}
+
+	@Override
+	public String toString() {
+		return "Contacto [nombre=" + nombre + ", correo=" + correo + ", direccion=" + direccion + "]";
 	}
 	
 	

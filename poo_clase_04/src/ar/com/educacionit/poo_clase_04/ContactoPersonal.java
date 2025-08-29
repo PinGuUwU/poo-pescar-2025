@@ -1,85 +1,50 @@
 package ar.com.educacionit.poo_clase_04;
 
-public class ContactoPersonal {
+public class ContactoPersonal extends Contacto{
 	
 	//Atributos
-	private String nombre;
-	private String correo;
-	private Direccion direccion;
+	private String fechaCumple;
+
 	
 
 
 	//Métodos
 	
 	//Constructor por defecto
-	public ContactoPersonal() { }
+	public ContactoPersonal() {
+		
+	}
 	
-	//Constructor parametrizado
-	public ContactoPersonal(String nombre, String correo) {
-		super();
-		this.nombre = nombre;
-		this.correo = correo;
+	//Constructor parametrizado sin sobrecarga
+	public ContactoPersonal(String nombre, String correo, Direccion direccion, String fechaCumple) {
+		super(nombre, correo, direccion);
+		this.fechaCumple = fechaCumple;
 	}
 
+
+	//Constructor sobrecargado
 	public ContactoPersonal(String nombre, String correo, Direccion direccion) {
-		super();
-		this.nombre = nombre;
-		this.correo = correo;
-		this.direccion = direccion;
-	}
-	
-	
-	
-	
-	
-	
-
-	void mostrarDatos() {
-		System.out.println("El nombre es: " + this.nombre+"\nEl correo es: "+this.correo);
-	}
-	
-	void felicitarCumpleanios() {
-		System.out.println("Feliz cumpleaños: "+this.nombre);
+		super(nombre, correo, direccion);
+		// TODO Auto-generated constructor stub
 	}
 
-	public void haceLoTuyo() {
-		mostrarDatos();
-		felicitarCumpleanios();
+
+
+
+
+	public String getFechaCumple() {
+		return fechaCumple;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getCorreo() {
-		return correo;
-	}
-
-	public void setCorreo(String correo) {
-		if(this.correo == correo) {
-			System.err.println("No podes cambiar por el mismo correo");
-		} else {
-			this.correo = correo;
-			System.out.println("Se cambió correctamente el correo.");
-		}
-	}
-
-	public Direccion getDireccion() {
-		return direccion;
-	}
-
-	public void setDireccion(Direccion direccion) {
-		this.direccion = direccion;
+	public void setFechaCumple(String fechaCumple) {
+		this.fechaCumple = fechaCumple;
 	}
 
 	@Override
 	public String toString() {
-		return "ContactoPersonal [nombre=" + nombre + ", correo=" + correo + ", direccion=" + direccion + "]";
+		return "ContactoPersonal [fechaCumple=" + fechaCumple + ", toString()=" + super.toString() + "]";
 	}
+
 	
 	
 	

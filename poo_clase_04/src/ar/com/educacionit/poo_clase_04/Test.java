@@ -14,7 +14,7 @@ public class Test {
 		System.out.println(cpersonal);
 		
 		Direccion dprofesional = new Direccion("Calle empresa", 555, 1409);
-		ContactoProfesional cprofesional = new ContactoProfesional("Laura", "Laura@gmail.com", dprofesional, "ACME");
+		ContactoProfesional cprofesional = new ContactoProfesional("Laura", "Laura@gmail.com", dprofesional, "ACME S.A.");
 		
 		System.out.println(cprofesional);
 		
@@ -22,9 +22,12 @@ public class Test {
 		cprofesional.mostrarInformacion();
 		
 		
+		Agenda agenda = new Agenda();
 		
+		agenda.agregarContacto(cprofesional);
+		agenda.agregarContacto(cpersonal);
 		
-		
+		agenda.mostrarContactos();
 	}
 
 }
